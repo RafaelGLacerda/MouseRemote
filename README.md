@@ -29,13 +29,12 @@ Você vai rodar um servidor no seu computador que escuta os comandos enviados pe
    node server.js
 
 2. Descubra o IP do seu computador:
-
 Encontre o endereço IPv4 da sua conexão de rede (exemplo: 192.168.0.105).
-
-No terminal do VSCode (ou prompt de comando), digite:
+No terminal do VSCode (ou prompt de comando), digite o comando:
 ipconfig
 
-No navegador do seu celular, digite o endereço IP com a porta 3000, no formato:
+
+3. No navegador do seu celular, digite o endereço IP com a porta 3000, no formato:
 Exemplo: http://192.168.0.105:3000
 
 
