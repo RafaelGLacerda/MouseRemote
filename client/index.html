@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+    <link rel="icon" href="icone.png" type="image/png">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Controle de Mouse</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: #f0f0f0;
+      height: 100vh;
+    }
+    h1 {
+      margin-bottom: 10px;
+    }
+    #touchpad {
+      width: 320px;
+      height: 480px;
+      background: #222;
+      border-radius: 12px;
+      margin-bottom: 15px;
+      touch-action: none; /* evita o scroll nativo no touch */
+      user-select: none;
+    }
+    .buttons {
+      display: flex;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+    button {
+      font-size: 18px;
+      padding: 10px 15px;
+      border-radius: 6px;
+      border: none;
+      cursor: pointer;
+      background: #444;
+      color: white;
+      transition: background 0.3s;
+      user-select: none;
+    }
+    button:hover {
+      background: #666;
+    }
+    footer {
+      font-size: 14px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <h1>🎮 Controle de Mouse</h1>
+
+  <div id="touchpad" aria-label="Touchpad para controle do mouse" role="application"></div>
+
+  <div class="buttons">
+    <button onclick="sendClick('left')">🖱️ Clique Esquerdo</button>
+    <button onclick="sendClick('right')">🖱️ Clique Direito</button>
+    <button onclick="sendScroll(50)">🔃 Scroll +</button>
+    <button onclick="sendScroll(-50)">🔃 Scroll -</button>
+  </div>
+
+  <footer>Conectado via Socket.IO</footer>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
