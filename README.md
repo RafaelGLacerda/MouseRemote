@@ -35,6 +35,6 @@ ipconfig
 
 
 3. No navegador do seu celular, digite o endereço IP com a porta 3000, no formato:
-Exemplo: http://192.168.0.105:3000
+Exemplo: http://192.168.0.432:3000
 
 
